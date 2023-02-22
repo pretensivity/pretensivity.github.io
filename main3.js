@@ -79,6 +79,8 @@ g(".progress-bar").onmouseout = function() {
     g(".slider-tick-hover").style.opacity = 0;
     mousedownonprogress = false;
 };
+var rewind10=function(){video.currentTime = (Math.max(0, video.currentTime - 10))};
+var forwards10 = function(){video.currentTime = (video.currentTime + 10)};
 document.body.addEventListener('keydown', function(e) {
     // console.log(e.keyCode)
     switch (e.keyCode) {
@@ -100,11 +102,11 @@ document.body.addEventListener('keydown', function(e) {
             break;
         case 65:
         case 37:
-            mapf.rewind10();
+            rewind10();
             break;
         case 68:
         case 39:
-            mapf.forwards10();
+            forwards10();
             break;
         case 70:
             toggleFullScreen();
