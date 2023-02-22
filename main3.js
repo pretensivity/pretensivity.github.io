@@ -100,11 +100,11 @@ document.body.addEventListener('keydown', function(e) {
             break;
         case 65:
         case 37:
-            player.rewind10();
+            mapf.rewind10();
             break;
         case 68:
         case 39:
-            player.forwards10();
+            mapf.forwards10();
             break;
         case 70:
             toggleFullScreen();
