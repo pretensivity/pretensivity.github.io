@@ -1236,8 +1236,10 @@ function runHLS(p){
   const track = hls.audioTracks[audioTrackId];
 
   for (let i = 0; i < len; i++) {
+    var tName = hls.audioTracks[i].name;
+    if(tName=="Turkish"){tName="Türkçe";}
+    
     html1 += buttonTemplate;
-
     html1 +=
       `<div onclick="hls.audioTrack=${i}">
         <input id="audioTrackPicker-${i}" name="audioTrackPicker" type="radio" tabindex="-1" value="${i}"`;
@@ -1245,7 +1247,7 @@ function runHLS(p){
       html1 += ' checked=""';
     }
     html1 +=`>
-        <label for="audioTrackPicker-${i}" class="picker-item picker-item-1 body-copy">${hls.audioTracks[i].name}</label>
+        <label for="audioTrackPicker-${i}" class="picker-item picker-item-1 body-copy">${tName}</label>
       </div></div>`;
   }
   g(".options-picker-arrow-container").style.display="block";
