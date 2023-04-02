@@ -1261,6 +1261,7 @@ function runHLS(p){
           if(hls.audioTracks[i].lang==lg){
               hls.audioTrack=i;
           }
+          if(hls.audioTracks[i].lang=="tu"&&lg=="tr"){hls.audioTrack=i;}
       }
     }
   },0);
